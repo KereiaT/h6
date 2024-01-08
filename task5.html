@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="task5.css" />
+</head>
+<body>
+  <div class="box">
+    <div class="items">
+      <div class="circle" data-anim="zoom-in">
+        <h3>1</h3>
+      </div>
+        <p>lorem</p>
+    </div>
+        
+    <div class="items">
+      <div class="circle" data-anim="rotate">
+        <h3>2</h3>
+      </div>
+        <p>lorem</p>
+    </div>
+        
+        
+    <div class="items">
+      <div class="circle" data-anim="translate-down">
+        <h3>3</h3>
+      </div>
+        <p>lorem</p>
+    </div>
+        
+    <div class="items">
+      <div class="circle" data-anim="translate-left-down">
+        <h3>4</h3>
+      </div>
+        <p>lorem</p>
+    </div>
+        
+    <div class="items">
+      <div class="circle" data-anim="translate-right-down">
+        <h3>5</h3>
+      </div>
+        <p>lorem</p>
+    </div>
+  </div>
+  <script>
+    const circles = document.querySelectorAll('.circle');
+    
+    circles.forEach(circle => {
+      const animationClass = circle.dataset.anim;
+      
+      if (animationClass) {
+        circle.classList.add(animationClass);
+        console.log(`Анімація застосована для елемента з data-anim="${animationClass}"`);
+      } else {
+        console.log('Анімація не визначена для цього елемента');
+      }
+    });
+
+  </script>
+</body>
+</html>

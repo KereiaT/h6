@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task1</title>
+</head>
+<body>
+  <ol id="list">
+    <li>Element 1</li>
+    <li>Element 2</li>
+    <li>Element 3</li>
+    <li>Element 4</li>
+    <li>Element 5</li>
+  </ol>
+
+  <script>
+    const firstEl = document.getElementById('list').firstElementChild;
+    const lastEl = document.getElementById('list').lastElementChild;
+    const secondEl = firstEl.nextElementSibling;
+    const fourthEl = lastEl.previousElementSibling;
+    const thirdEl = secondEl.nextElementSibling;
+
+    alert(
+      `1. ${firstEl.innerHTML}\n` +
+      `2. ${secondEl.innerHTML}\n` +
+      `3. ${thirdEl.innerHTML}\n` +
+      `4. ${fourthEl.innerHTML}\n` +
+      `5. ${lastEl.innerHTML}`
+    );
+  </script>
+</body>
+</html>
+
